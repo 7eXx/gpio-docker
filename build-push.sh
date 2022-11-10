@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -xe
+set -ex
 
 [ -f .env ] && . ./.env
 [ -f .env.local ] && . ./.env.local
