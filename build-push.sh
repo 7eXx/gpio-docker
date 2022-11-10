@@ -21,10 +21,10 @@ docker build \
     -t ${branch_image_name} \
     -t ${commit_image_name} .
 
-exit 1;
-
 cat ./.docker_pass | docker login -u $USERNAME --password-stdin
 
 docker push --all-tags ${image_name} 
 
 docker logout
+
+exit 0
