@@ -23,8 +23,8 @@ docker build \
 
 cat ./.docker_pass | docker login -u $USERNAME --password-stdin
 
-docker push --all-tags ${image_name} 
-
-docker logout
+docker push ${full_image_name} 
+docker push ${branch_image_name} 
+docker push ${commit_image_name} 
 
 exit 0
