@@ -12,10 +12,10 @@ To build and push docker image use the command:
 $ ./build-push.sh
 ```
 
-## Run application
+## Run application (on Pi)
 In the raspberry pi (with docker) use the following command:
 ```
-$ docker run --privileged 7exx:raspi-led-blink
+$ docker run --privileged --rm -d 7exx:raspi-led-blink
 ```
 Or for a more recent version
 ```
