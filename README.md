@@ -6,6 +6,9 @@ Gpio are mapped into a docker container.
 Copy ***.env*** file into ***.env.local*** and fill it with right values.  
 Create a ***.docker_pass** file with docker personal toker inside.
 
+**NOTE:** It's mandatory to use ***docker desktop*** which use a virtual machine, to build the image succefully.  
+This is because the image must be compiled for **linux/arm/v6** platform.
+
 ## Build and push docker image
 To build and push docker image use the command: 
 ```
