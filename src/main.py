@@ -1,9 +1,14 @@
-from gpiozero import LED
+from gpiozero import LED, Button
 from time import sleep
+from signal import pause
+
+def when_pressed():
+    print("toggling status")
+    led.toggle()
 
 led = LED(17)
-while True:
-    led.on()
-    sleep(1)
-    led.off()
-    sleep(1)
+button = Button(4, bounce_time=0.3)
+
+button.when_pressed = when_pressed
+
+pause()
